@@ -1,0 +1,18 @@
+<main class="container py-5">  
+    <h2 class="mb-5">Nos catégories de films</h2>  
+    <section class="row">  
+        <?php foreach ($data["categories"] as $category): ?>
+            <article class="card col-3 mx-2 p-5">  
+                <header>  
+                    <h3 class="card-title"><?php echo $category->getName(); ?></h3>  
+                </header>  
+                <p class="card-text">  
+                    <?php echo $category->getDescription(); ?>  
+                </p>  
+                <footer>  
+                    <a href="/res04-router/categories/<?php echo $category->getSlug(); ?>" class="btn btn-primary">Les films de <?php echo $category->getName(); ?></a>  
+                </footer>  
+            </article>  
+        <?php endforeach; ?>
+    </section>  
+</main>
