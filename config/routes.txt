@@ -14,4 +14,24 @@ La route pour afficher la liste des produits :
   
 La route pour afficher le détail d'un produit :  
   
-/produits/:slug-produit
+/produits/:slug-produit  
+  
+  
+La route qui affiche le formulaire d'inscription  
+  
+/creer-un-compte  
+  
+  
+La route qui créé un utilisateur (l'action du formulaire d'inscription)  
+  
+/check-creer-un-compte  
+  
+  
+La route qui affiche le formulaire de connexion  
+  
+/connexion  
+  
+  
+La route qui vérifie la connexion (l'action du formulaire de connexion)  
+  
+/check-connexion

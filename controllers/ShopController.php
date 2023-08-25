@@ -4,11 +4,13 @@ class ShopController extends AbstractController {
   
     private ProductManager $pm;  
     private CategoryManager $cm;  
+    private UserManager $userManager;
   
     public function __construct()  
     {  
         $this->pm = new ProductManager();  
         $this->cm = new CategoryManager(); 
+        $this->userManager = new UserManager();
     }  
   
     /* Pour la route de la home */  
@@ -16,7 +18,8 @@ class ShopController extends AbstractController {
     {  
         // $categories = []; // à remplacer par un appel au manager pour récupérer la liste des catégories
         $categories = $this->cm->getAllCategories(); // Utilisation du CategoryManager
-      
+        
+        // fonctionne
         $this->render("index", [  
             "categories" => $categories  
         ]);  
