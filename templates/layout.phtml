@@ -36,14 +36,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/res04-auth/connexion">Connexion</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/res04-auth/deconnexion">Déconnexion</a>
+                    </li>
                 </ul>  
             </nav>  
         </header>  
-        <?php if (isset($_SESSION["user_id"])) : ?>
-        <div class="alert alert-success mt-3">
-            Vous êtes connecté en tant qu'utilisateur.
-        </div>
-        <?php endif; ?>
+        <!--//<?php //if (isset($_SESSION["user_id"])) : ?>-->
+        <!--<div class="alert alert-success mt-3">-->
+        <!--    Vous êtes connecté en tant qu'utilisateur.-->
+        <!--</div>-->
+        <!--//<?php //endif; ?>-->
         <?php require "templates/{$page}.phtml"; ?>  
         <footer>  
   

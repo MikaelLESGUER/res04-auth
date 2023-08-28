@@ -6,7 +6,7 @@ class AuthController extends AbstractController {
     
     public function __construct() 
     {
-        // session_start();
+        //session_start();
         $this->userManager = new UserManager(); // Assurez-vous que vous instanciez le UserManager ici
     }
     
@@ -36,7 +36,7 @@ class AuthController extends AbstractController {
         $createdUser = $this->userManager->createUser($newUser);
         
         // Ajoutez cette ligne pour déboguer
-        var_dump($createdUser);
+        //var_dump($createdUser);
 
         // Connecter l'utilisateur
         if ($createdUser) {
@@ -107,4 +107,22 @@ class AuthController extends AbstractController {
     	    // si il n'est pas bon renvoyer sur la page de connexion    
         // si il n'existe pas renvoyer vers la page de connexion
     }
+    
+    public function logout() : void {
+
+        // Détruire toutes les variables de session
+        // unset($_SESSION["user_id"]);
+
+        // Stockez un message de déconnexion dans la session
+        // $_SESSION["message"] = "Vous avez été déconnecté avec succès.";
+
+        // Détruire la session
+        session_destroy();
+        
+        // Rediriger vers la page d'accueil ou toute autre page
+        header("Location: /res04-auth/");
+        
+        // exit;
+    }
+    
 }

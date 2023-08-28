@@ -35,3 +35,7 @@ La route qui affiche le formulaire de connexion
 La route qui vérifie la connexion (l'action du formulaire de connexion)  
   
 /check-connexion
+
+La route pour se donnecter
+
+/deconnexion

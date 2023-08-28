@@ -54,6 +54,10 @@ class Router {
         {  
             $routeAndParams["route"] = "check-connexion";
         }
+        else if($tab[0] === "deconnexion")
+        {
+            $routeAndParams["route"] = "deconnexion";
+        }
     }  
     else  
     {  
@@ -66,6 +70,9 @@ class Router {
     public function checkRoute(string $route) : void  
     {  
         $routeTab = $this->splitRouteAndParameters($route);
+        
+        // var_dump($routeTab);
+        // die;
       
         if ($routeTab["route"] === "") 
         { 
@@ -102,6 +109,11 @@ class Router {
         else if ($routeTab["route"] === "check-connexion") // condition pour l'action du formulaire de connexion
         {
             $this->auth->checkLogin();
+        }
+        else if ($routeTab["route"] === "deconnexion") 
+        {
+        
+            $this->auth->logout();
         }
     
     }
